@@ -1,0 +1,16 @@
+spring:
+  config:
+    activate:
+      on-profile: local
+
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    url: jdbc:mysql://localhost:3306/study_project
+    password: '3620'
+  application:
+    name: StudyProject
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: 'true'

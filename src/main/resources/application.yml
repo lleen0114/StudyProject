@@ -1,0 +1,5 @@
+spring:
+  profiles:
+    group:
+      logging: local
+    active: logging
