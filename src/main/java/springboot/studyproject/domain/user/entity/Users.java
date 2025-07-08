@@ -17,6 +17,9 @@ public class Users {
     @Column(name = "user_id")
     private Integer userId;
 
+    @Column(name = "user_name")
+    private String userName;
+
     @Column(name = "user_nickname")
     private String userNickname;
 
@@ -29,6 +32,9 @@ public class Users {
 
     @Column(name = "del_date")
     private LocalDateTime delDate;
+
+    @Column(name = "provider")
+    private String provide;
 
     @Builder
     public Users(String userEmail, String userNickname){
