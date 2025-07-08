@@ -14,3 +14,11 @@ spring:
     hibernate:
       ddl-auto: update
     show-sql: 'true'
+
+
+logging:
+  level:
+    springboot.studyproject: debug
+
+jwt:
+  secret: 6f8f57715090da2632453988d9a1501b
