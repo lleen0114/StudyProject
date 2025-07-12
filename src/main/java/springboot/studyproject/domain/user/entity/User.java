@@ -3,7 +3,6 @@ package springboot.studyproject.domain.user.entity;
 import jakarta.persistence.*;
 import lombok.*;
 import org.hibernate.annotations.CreationTimestamp;
-import org.hibernate.annotations.CurrentTimestamp;
 
 import java.time.LocalDateTime;
 
@@ -11,7 +10,7 @@ import java.time.LocalDateTime;
 @Getter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @Table(name = "users")
-public class Users {
+public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "user_id")
@@ -37,14 +36,14 @@ public class Users {
     private String provide;
 
     @Builder
-    public Users(String userEmail, String userNickname){
+    public User(String userEmail, String userNickname){
         this.userEmail = userEmail;
         this.userNickname = userNickname;
     }
 
     //새로운 유저 만드는 메소드
-    public static Users createNewUser(String userEmail, String userNickname){
-        Users user = new Users();
+    public static User createNewUser(String userEmail, String userNickname){
+        User user = new User();
         user.userNickname = userNickname;
         user.userEmail = userEmail;
 
