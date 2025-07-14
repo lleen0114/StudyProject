@@ -33,19 +33,20 @@ public class User {
     private LocalDateTime delDate;
 
     @Column(name = "provider")
-    private String provide;
+    private String provider;
 
     @Builder
-    public User(String userEmail, String userNickname){
+    public User(String userEmail, String userName){
         this.userEmail = userEmail;
-        this.userNickname = userNickname;
+        this.userNickname = userName;
     }
 
     //새로운 유저 만드는 메소드
-    public static User createNewUser(String userEmail, String userNickname){
+    public static User createNewUser(String userEmail, String userName, String provider){
         User user = new User();
-        user.userNickname = userNickname;
+        user.userName = userName;
         user.userEmail = userEmail;
+        user.provider = provider;
 
         return user;
     }
